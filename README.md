@@ -15,7 +15,10 @@
 * SQL
 * Apache/Nginx
 
-## Setup
+#### Reason
+It is built on `PHP` for scalable & fast developement or because i :heart: it
+
+## Setup :memo:
 
 #### Create database schema:
 `php artisan migrate`
@@ -24,5 +27,5 @@
 `APP_URL=http://ww.website.com` 
 > Important: without `'/'` in end
 
-## Run
+## Run :rocket:
 `php artisan serve`
