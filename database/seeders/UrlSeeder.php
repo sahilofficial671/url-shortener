@@ -15,17 +15,23 @@ class UrlSeeder extends Seeder
     {
         Url::create([
             'protocol' => 'https',
-            'domain' => 'test.com',
-            'query_parameters' => 'click=1',
-            'multiple_clicks_allowed' => false,
+            'domain' => 'www.google.com',
+            'path' => '/search',
+            'query' => 'q=hello+world',
+            'max_hits' => 100,
+            'hits' => 0,
+            'alias' => 'helloworld',
             'status' => true
         ]);
 
         Url::create([
             'protocol' => 'http',
-            'domain' => 'helloworld.in',
-            'query_parameters' => 'name=sahil&hobby=movies',
-            'multiple_clicks_allowed' => true,
+            'domain' => 'en.wikipedia.org',
+            'path' => '/wiki/India',
+            'query' => null,
+            'max_hits' => 120,
+            'hits' => 0,
+            'alias' => 'india',
             'status' => true
         ]);
     }

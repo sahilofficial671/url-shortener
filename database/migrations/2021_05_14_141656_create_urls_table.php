@@ -17,8 +17,11 @@ class CreateUrlsTable extends Migration
             $table->id();
             $table->string('protocol');
             $table->string('domain');
-            $table->string('query_parameters')->nullable();
-            $table->boolean('multiple_clicks_allowed');
+            $table->string('path');
+            $table->string('query')->nullable();
+            $table->integer('max_hits');
+            $table->integer('hits');
+            $table->string('alias');
             $table->boolean('status');
             $table->timestamps();
         });
