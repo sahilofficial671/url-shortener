@@ -1,4 +1,4 @@
-# URL Hashing
+# Setup :memo
 
 ## Requirements
 
@@ -14,11 +14,6 @@
 * XML PHP Extension
 * SQL
 * Apache/Nginx
-
-#### Reason
-It is built on `PHP` for scalable & fast developement or because i :heart: it
-
-## Setup :memo:
 
 #### Create database schema:
 `php artisan migrate`
