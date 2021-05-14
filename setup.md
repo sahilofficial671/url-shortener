@@ -1,4 +1,4 @@
-# Setup :memo
+# Setup :memo:
 
 ## Requirements
 
