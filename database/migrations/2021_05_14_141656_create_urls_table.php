@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateUrlsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('urls', function (Blueprint $table) {
+            $table->id();
+            $table->string('protocol');
+            $table->string('domain');
+            $table->string('query_parameters')->nullable();
+            $table->boolean('multiple_clicks_allowed');
+            $table->boolean('status');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('urls');
+    }
+}
