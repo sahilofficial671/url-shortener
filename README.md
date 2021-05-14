@@ -17,6 +17,12 @@
 
 ## Setup
 
-#### Create database schema `php artisan migrate`
-#### Add APP_URL in `.env` file Eg. `APP_URL=http://ww.website.com` 
-!! Important: without `'/'` in end !!
+#### Create database schema:
+`php artisan migrate`
+
+#### Add APP_URL in `.env`:
+`APP_URL=http://ww.website.com` 
+> Important: without `'/'` in end
+
+## Run
+`php artisan serve`
