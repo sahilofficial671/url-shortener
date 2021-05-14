@@ -3,17 +3,9 @@
 ## Requirements
 
 * PHP >= 7.2.5
-* BCMath PHP Extension
-* Ctype PHP Extension
-* Fileinfo PHP extension
-* JSON PHP Extension
-* Mbstring PHP Extension
-* OpenSSL PHP Extension
-* PDO PHP Extension
-* Tokenizer PHP Extension
-* XML PHP Extension
 * SQL
 * Apache/Nginx
+* [For futher requirements](https://github.com/sahilofficial671/URL-Hashing/blob/main/setup.md)
 
 #### Reason
 It is built on `PHP` for scalable & fast developement or because i :heart: it
