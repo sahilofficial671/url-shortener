@@ -1,7 +1,8 @@
 # To do :pencil:
 
 ## Authenticated Frontend :lock:
-We can have authenticated frontend where users have to authenticate themselves in order to Hash URLs
+- We can have authenticated frontend where users have to authenticate themselves in order to Hash URLs
+- Email verification for authentication
 
 ## Advance Analytic :gem:
 We can following tracking parameters to urls:
