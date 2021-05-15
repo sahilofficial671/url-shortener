@@ -96,3 +96,7 @@ jobs:
             cd /var/www/url-hasher/
             git checkout -f
             git pull origin main
+            php artisan config:cache
+            php artisan cache:clear
+            php artisan route:clear
+            php artisan view:clear
