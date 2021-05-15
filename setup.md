@@ -15,12 +15,18 @@
 * SQL
 * Apache/Nginx
 
-#### Create database schema:
-`php artisan migrate`
+### Run Following Commmands & Add Configurations:
 
-#### Add APP_URL in `.env`:
-`APP_URL=http://ww.website.com` 
+#### 1. Clone project:
+`git clone https://github.com/sahilofficial671/URL-Hashing.git`
+
+#### 2. Create database schema:
+**Fresh:** `php artisan migrate:fresh`\
+**With Sample Data** `php artisan migrate:fresh --seed`
+
+#### 3. Add APP_URL in `.env`:
+`APP_URL=http://ww.website.com`
 > Important: without `'/'` in end
 
-## Run :rocket:
+## Run Project :rocket:
 `php artisan serve`
