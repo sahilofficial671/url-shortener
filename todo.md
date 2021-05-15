@@ -1,7 +1,6 @@
 # To do :pencil:
 
-## Authenticated Frontend :lock:
-- We can have authenticated frontend where users have to authenticate themselves in order to Hash URLs
+## Verified Authenticated Panel :lock:
 - Email verification for authentication
 
 ## Advance Analytic :gem:
