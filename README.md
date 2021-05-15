@@ -4,7 +4,6 @@
 ## Introduction
 URL Hashing System comes with:
 - Authenticated way to Shorten a full lenght URL path after domain to 6 digit string.
-Ex: 
 ```
 Actual URL: https://www.google.com/search?q=hello+world&sxsrf=ALeKk01kLVVuScZNI1CurW0px6zRWtxvaw%3A1621055778102&source=hp&ei=IlmfYOWsA7KcmgfbgZbwDQ
 
