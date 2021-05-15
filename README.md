@@ -3,7 +3,7 @@
 
 ## Introduction
 URL Hashing System comes with:
-- Shorten a full lenght URL path after domain to 6 digit string. 
+- Authenticated way to Shorten a full lenght URL path after domain to 6 digit string.
 - Click analytic, restrictions, redirecton.
 - User friendly way to create hashed urls.
 - Automated deploy pipeline via SSH.
