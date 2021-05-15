@@ -1,5 +1,5 @@
 # URL Hashing
-<a href="https://github.com/sahilofficial671/URL-Hashing/actions?query=workflow%3ABuild"><img src="https://github.com/sahilofficial671/URL-Hashing/workflows/Build/badge.svg" alt="Build Status"></a>
+![https://github.com/sahilofficial671/URL-Hashing/actions?query=workflow%3ABuild"](https://github.com/sahilofficial671/URL-Hashing/actions/workflows/build.yml/badge.svg)
 
 ## Requirements
 
