@@ -7,7 +7,7 @@ URL Hashing System comes with:
 ```
 Actual URL: https://www.google.com/search?q=hello+world&sxsrf=ALeKk01kLVVuScZNI1CurW0px6zRWtxvaw%3A1621055778102&source=hp&ei=IlmfYOWsA7KcmgfbgZbwDQ
 
-Shortened URL: https://url-hasher.webiggle.com/u/a6cb3d
+Shortened URL: https://url-hasher.webiggle.com/u/goo234
 ```
 - Click analytic, restrictions, redirecton.
 - User friendly way to create hashed urls.
