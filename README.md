@@ -11,7 +11,7 @@ Shortened URL: https://url-hasher.webiggle.com/u/goo234
 ```
 - Click analytic, restrictions, redirecton.
 - User friendly way to create hashed urls.
-- Automated deploy pipeline via SSH.
+- Automated deployment to AWS EC2 via SSH.
 
 ## Get Started
 You can use [our Hosted version](https://url-hasher.webiggle.com/).
