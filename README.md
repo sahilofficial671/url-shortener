@@ -11,7 +11,7 @@ Shortened URL: https://url-hasher.webiggle.com/u/goo234
 ```
 - Click analytic, restrictions, redirecton.
 - User friendly way to create hashed urls.
-- Automated deploy pipeline via SSH.
+- Automated deployment to AWS EC2 via SSH.
 
 ## Get Started
 You can use [our Hosted version](https://url-hasher.webiggle.com/).
@@ -28,13 +28,7 @@ If you want to host it yourself, you will need:
 It is built on `PHP` for scalable & fast developement or because i :heart: it
 
 ## Setup :memo:
+- View [setup.md](https://github.com/sahilofficial671/URL-Hashing/blob/main/setup.md) for full setup.
 
-#### Create database schema:
-`php artisan migrate`
-
-#### Add APP_URL in `.env`:
-`APP_URL=http://ww.website.com` 
-> Important: without `'/'` in end
-
-## Run :rocket:
-`php artisan serve`
+## Further tasks to be done :memo:
+- View [todo.md](https://github.com/sahilofficial671/URL-Hashing/blob/main/todo.md)
