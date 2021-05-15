@@ -1,31 +1,14 @@
-# URL Hashing
+# To do
 
-## Requirements
+## Authenticated Frontend
+We can have authenticated frontend where users have to authenticate themselves in order to Hash URLs
 
-* PHP >= 7.2.5
-* BCMath PHP Extension
-* Ctype PHP Extension
-* Fileinfo PHP extension
-* JSON PHP Extension
-* Mbstring PHP Extension
-* OpenSSL PHP Extension
-* PDO PHP Extension
-* Tokenizer PHP Extension
-* XML PHP Extension
-* SQL
-* Apache/Nginx
+## Advance Analytic
+We can following tracking parameters to urls:
+- IP Address tracking (From where it's shortened & where used)
+- IP Address restriction (Allowed & Disallowed IP Address mapped with URLs)
+- Location based tracking (From where it's shortened & where used)
+- Location based restriction (Allowed & Disallowed Locations mapped with URLs)
 
-#### Reason
-It is built on `PHP` for scalable & fast developement or because i :heart: it
-
-## Setup :memo:
-
-#### Create database schema:
-`php artisan migrate`
-
-#### Add APP_URL in `.env`:
-`APP_URL=http://ww.website.com` 
-> Important: without `'/'` in end
-
-## Run :rocket:
-`php artisan serve`
+## Edit already hased URLs
+We can have a edit window where user can edit already hashed URLs.
