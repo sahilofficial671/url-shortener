@@ -2,10 +2,11 @@
 ![https://github.com/sahilofficial671/URL-Hashing/actions?query=workflow%3ABuild"](https://github.com/sahilofficial671/URL-Hashing/actions/workflows/build.yml/badge.svg)
 
 ## Introduction
-URL Hashing System allows user to:
+URL Hashing System comes with:
 - Shorten a full lenght URL path after domain to 6 digit string. 
-- Click analytic, restrictions, redirecton
+- Click analytic, restrictions, redirecton.
 - User friendly way to create hashed urls.
+- Automated deploy pipeline via SSH.
 
 ## Get Started
 You can use [our Hosted version](https://url-hasher.webiggle.com/).
