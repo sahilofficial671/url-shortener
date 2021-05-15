@@ -28,13 +28,7 @@ If you want to host it yourself, you will need:
 It is built on `PHP` for scalable & fast developement or because i :heart: it
 
 ## Setup :memo:
+- View [setup.md](https://github.com/sahilofficial671/URL-Hashing/blob/main/setup.md) for full setup.
 
-#### Create database schema:
-`php artisan migrate`
-
-#### Add APP_URL in `.env`:
-`APP_URL=http://ww.website.com` 
-> Important: without `'/'` in end
-
-## Run :rocket:
-`php artisan serve`
+## Further tasks to be done :memo:
+- View [todo.md](https://github.com/sahilofficial671/URL-Hashing/blob/main/todo.md)
