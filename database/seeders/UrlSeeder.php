@@ -21,6 +21,7 @@ class UrlSeeder extends Seeder
             'max_hits' => 100,
             'hits' => 0,
             'alias' => 'helloworld',
+            'created_by' => 1,
             'status' => true
         ]);
 
@@ -32,6 +33,7 @@ class UrlSeeder extends Seeder
             'max_hits' => 120,
             'hits' => 0,
             'alias' => 'india',
+            'created_by' => 1,
             'status' => true
         ]);
 
@@ -44,6 +46,7 @@ class UrlSeeder extends Seeder
             'max_hits' => 120,
             'hits' => 0,
             'alias' => 'goo234',
+            'created_by' => 1,
             'status' => true
         ]);
     }

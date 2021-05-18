@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
-use App\Models\Analytic;
+use App\Models\User;
 
 class Url extends Model
 {
@@ -25,6 +25,7 @@ class Url extends Model
         'max_hits',
         'hits',
         'alias',
+        'created_by',
         'status'
     ];
 
@@ -78,5 +79,15 @@ class Url extends Model
     public function hasQuery()
     {
         return isset($this->query);
+    }
+
+    /**
+     * Get the user that owns the Url
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function createdBy(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'created_by');
     }
 }

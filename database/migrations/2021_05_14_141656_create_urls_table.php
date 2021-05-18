@@ -22,8 +22,11 @@ class CreateUrlsTable extends Migration
             $table->integer('max_hits');
             $table->integer('hits');
             $table->string('alias');
+            $table->foreignId('created_by');
             $table->boolean('status');
             $table->timestamps();
+
+            $table->foreign('created_by')->references('id')->on('users');
         });
     }
 

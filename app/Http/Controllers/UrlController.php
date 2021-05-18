@@ -26,14 +26,15 @@ class UrlController extends Controller
             $url = parse_url($request->url);
 
             $model = Url::create([
-                'protocol' => $url['scheme'],
-                'domain' => $url['host'],
-                'path' => $url['path'],
-                'query' => isset($url['query']) ? $url['query'] : null,
-                'max_hits' => $request->max_hits,
-                'hits' => 0,
-                'alias' => $this->generateAlias(),
-                'status' => true
+                'protocol'   => $url['scheme'],
+                'domain'     => $url['host'],
+                'path'       => $url['path'],
+                'query'      => $url['query'] ?? null,
+                'max_hits'   => $request->max_hits,
+                'hits'       => 0,
+                'alias'      => $this->generateAlias(),
+                'created_by' => Auth::id(),
+                'status'     => true
             ]);
 
             return back()->with([
@@ -61,10 +62,7 @@ class UrlController extends Controller
 
         // If allowed to hit
         if($url->max_hits > $url->hits){
-            $url->update([
-                'hits' => $url->hits + 1
-            ]);
-
+            $url->increment('hits');
             return $url->redirectToFullUrl();
         }
 
