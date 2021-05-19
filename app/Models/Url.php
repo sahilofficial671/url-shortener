@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
 use App\Models\User;
+use App\Traits\HasRedirections;
 
 class Url extends Model
 {
-    use HasFactory;
+    use HasFactory, HasRedirections;
 
     /**
      * The attributes that are mass assignable.
@@ -52,15 +53,6 @@ class Url extends Model
         }
 
         return sprintf('%s://%s%s?%s', $this->protocol, $this->domain, $this->path, $this->query);
-    }
-
-    /**
-     *  Return Full URL.
-     *  @return \Illuminate\Http\RedirectResponse
-     */
-    public function redirectToFullUrl()
-    {
-        return redirect()->to($this->getFullUrl());
     }
 
     /**

@@ -15,10 +15,10 @@ class CreateUrlsTable extends Migration
     {
         Schema::create('urls', function (Blueprint $table) {
             $table->id();
-            $table->string('protocol');
-            $table->string('domain');
+            $table->string('protocol', 5);
+            $table->string('domain', 80);
             $table->string('path');
-            $table->string('query', 10000)->nullable();
+            $table->string('query', 5000)->nullable();
             $table->integer('max_hits');
             $table->integer('hits');
             $table->string('alias');
