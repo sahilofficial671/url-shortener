@@ -18,7 +18,7 @@ jobs:
             image: mysql:5.7
             env:
               MYSQL_ROOT_PASSWORD: ${{ secrets.DB_PASSWORD }}
-              MYSQL_DATABASE: db_url_hashing
+              MYSQL_DATABASE: db_url_shortener
             ports:
               - 3307:3306
             options: >-
@@ -73,7 +73,7 @@ jobs:
 
       env:
         DB_CONNECTION: mysql
-        DB_DATABASE: db_url_hashing
+        DB_DATABASE: db_url_shortener
         DB_PORT: 3307
         DB_USER: root
         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
