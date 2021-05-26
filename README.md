@@ -1,5 +1,5 @@
-# URL Hashing
-![https://github.com/sahilofficial671/URL-Hashing/actions?query=workflow%3ABuild"](https://github.com/sahilofficial671/URL-Hashing/actions/workflows/build.yml/badge.svg)
+# URL Shortener
+![https://github.com/sahilofficial671/url-shortener/actions?query=workflow%3ABuild"](https://github.com/sahilofficial671/url-shortener/actions/workflows/build.yml/badge.svg)
 
 ## Introduction
 URL Hashing System comes with:
@@ -14,7 +14,7 @@ Shortened URL: https://url-hasher.webiggle.com/u/goo234
 - Automated deployment to AWS EC2 via SSH.
 
 ## Get Started
-You can use [our Hosted version](https://url-hasher.webiggle.com/).
+You can use [our Hosted version](https://url-shortener.webiggle.com/).
 
 ## Requirements
 If you want to host it yourself, you will need:
@@ -22,13 +22,13 @@ If you want to host it yourself, you will need:
 - HTTP server with PHP support (eg: Apache, Nginx, Caddy)
 - Composer
 - MySQL
-- [For futher requirements](https://github.com/sahilofficial671/URL-Hashing/blob/main/setup.md)
+- [For futher requirements](https://github.com/sahilofficial671/url-shortener/blob/main/setup.md)
 
 #### Reason
 It is built on `PHP` for scalable & fast developement or because i :heart: it
 
 ## Setup :memo:
-- View [setup.md](https://github.com/sahilofficial671/URL-Hashing/blob/main/setup.md) for full setup.
+- View [setup.md](https://github.com/sahilofficial671/url-shortener/blob/main/setup.md) for full setup.
 
 ## Further tasks to be done :memo:
-- View [todo.md](https://github.com/sahilofficial671/URL-Hashing/blob/main/todo.md)
+- View [todo.md](https://github.com/sahilofficial671/url-shortener/blob/main/todo.md)

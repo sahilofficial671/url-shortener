@@ -18,7 +18,7 @@
 ### Run Following Commmands & Add Configurations:
 
 #### 1. Clone project:
-`git clone https://github.com/sahilofficial671/URL-Hashing.git`
+`git clone https://github.com/sahilofficial671/url-shortener.git`
 
 #### 2. Create database schema:
 **Fresh:** `php artisan migrate:fresh`\
