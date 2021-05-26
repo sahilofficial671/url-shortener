@@ -93,7 +93,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
           script: |
-            cd /var/www/url-hasher/
+            cd ${{ secrets.PROJECT_HOME }}
             git checkout -f
             git pull origin main
             php artisan config:cache
