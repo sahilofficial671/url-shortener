@@ -51,5 +51,5 @@ It is built on `PHP` for scalable & fast developement or because i :heart: it
 ## Run Project :rocket:
 `php artisan serve`
 
-## Further tasks to be done :memo:
-- View [todo.md](https://github.com/sahilofficial671/url-shortener/blob/main/todo.md)
+## Learn more
+- If you find any bugs, please file them by [creating a new issue](https://github.com/sahilofficial671/url-shortener/issues).
