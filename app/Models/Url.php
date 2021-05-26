@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
 
 use App\Models\User;
-use App\Traits\HasRedirections;
+use App\Traits\HasUrl;
 
 class Url extends Model
 {
-    use HasFactory, HasRedirections;
+    use HasFactory, HasUrl;
 
     /**
      * The attributes that are mass assignable.
@@ -33,44 +33,13 @@ class Url extends Model
     /**
      *  This will validate and submit new url for aliasing
      *
-     *  @param Illuminate\Database\Eloquent\Builder $builder
-     *  @param string $alias
-     *  @return Illuminate\Database\Eloquent\Builder
+     *  @param \Illuminate\Database\Eloquent\Builder    $builder
+     *  @param  string                                  $alias
+     *  @return \Illuminate\Database\Eloquent\Builder
      */
     public function scopeByAlias(Builder $builder, String $alias)
     {
         return  $builder->where('alias', $alias);
-    }
-
-    /**
-     *  Return Full URL.
-     *  @return string
-     */
-    public function getFullUrl()
-    {
-        if(!$this->hasQuery()){
-            return sprintf('%s://%s%s', $this->protocol, $this->domain, $this->path);
-        }
-
-        return sprintf('%s://%s%s?%s', $this->protocol, $this->domain, $this->path, $this->query);
-    }
-
-    /**
-     *  Return Aliased URL.
-     *  @return string
-     */
-    public function getAliasedUrl()
-    {
-        return sprintf('%s/u/%s', config('app.url'), $this->alias);
-    }
-
-    /**
-     *  Checks if query string.
-     *  @return boolean
-     */
-    public function hasQuery()
-    {
-        return isset($this->query);
     }
 
     /**

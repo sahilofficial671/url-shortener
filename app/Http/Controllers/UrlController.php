@@ -17,56 +17,49 @@ class UrlController extends Controller
      */
     public function submit(Request $request)
     {
-        try {
-            $validated = $request->validate([
-                'url' => 'required|url',
-                'max_hits' => 'required|integer',
-            ]);
+        $validated = $request->validate([
+            'url' => 'required|url',
+            'max_hits' => 'required|integer',
+        ]);
 
-            $url = parse_url($request->url);
+        $url = parse_url($request->url);
 
-            $model = Url::create([
-                'protocol'   => $url['scheme'],
-                'domain'     => $url['host'],
-                'path'       => $url['path'],
-                'query'      => $url['query'] ?? null,
-                'max_hits'   => $request->max_hits,
-                'hits'       => 0,
-                'alias'      => $this->generateAlias(),
-                'created_by' => Auth::id(),
-                'status'     => true
-            ]);
+        $model = Url::create([
+            'protocol'   => $url['scheme'],
+            'domain'     => $url['host'],
+            'path'       => $url['path'],
+            'query'      => $url['query'] ?? null,
+            'max_hits'   => $request->max_hits,
+            'hits'       => 0,
+            'alias'      => $this->generateAlias(),
+            'created_by' => Auth::id(),
+            'status'     => true
+        ]);
 
-            return back()->with([
-                'success' => 'Succefully Hashed!',
-                'actualUrl' => $model->getFullUrl(),
-                'aliasedUrl' => $model->getAliasedUrl(),
-            ]);
-        } catch (\Exception $e) {
-            Log::error(sprintf('Something went wrong in: %s, Message: . %s, Line: %s %s, Request: %s', self::class, $e->getMessage(), $e->getLine(), $e->getFile(), json_encode($request->all())));
-            return back()->with(['error' => 'Something went wrong!',]);
-        }
-
+        return back()->with([
+            'success'    => 'Succefully Hashed!',
+            'actualUrl'  => $model->getFullUrl(),
+            'aliasedUrl' => $model->getAliasedUrl(),
+        ]);
     }
 
     /**
      *  This will fetch and redirect as per given aliased url
      *
-     *  @param Request $request
-     *  @param string $alias
+     *  @param  Request $request
+     *  @param  string  $alias
      *  @return \Symfony\Component\HttpKernel\Exception\HttpException|\Illuminate\Http\RedirectResponse
      */
     public function get(Request $request, String $alias)
     {
         $url = URL::where('alias', $alias)->firstOrFail();
 
-        // If allowed to hit
-        if($url->max_hits > $url->hits){
+        if($url->isHitAllowed()){
             $url->increment('hits');
             return $url->redirectToFullUrl();
         }
 
-        return abort(404);
+        return abort(403);
     }
 
     /**
@@ -77,7 +70,7 @@ class UrlController extends Controller
     {
         $alias = substr(md5(time()), 0, 6);
 
-        if(Url::byAlias('$alias')->get()->count()){
+        if(Url::byAlias($alias)->get()->isNotEmpty()){
             $this->generateAlias();
         }
 
