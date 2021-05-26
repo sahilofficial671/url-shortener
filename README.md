@@ -16,19 +16,40 @@ Shortened URL: https://url-shortener.webiggle.com/u/goo234
 ## Get Started
 You can use [our Hosted version](https://url-shortener.webiggle.com/).
 
-## Requirements
-If you want to host it yourself, you will need:
-- PHP >= 7.2.5
-- HTTP server with PHP support (eg: Apache, Nginx, Caddy)
-- Composer
-- MySQL
-- [For futher requirements](https://github.com/sahilofficial671/url-shortener/blob/main/setup.md)
-
 #### Reason
 It is built on `PHP` for scalable & fast developement or because i :heart: it
 
 ## Setup :memo:
-- View [setup.md](https://github.com/sahilofficial671/url-shortener/blob/main/setup.md) for full setup.
+### Requirements
+
+* PHP >= 7.2.5
+* BCMath PHP Extension
+* Ctype PHP Extension
+* Fileinfo PHP extension
+* JSON PHP Extension
+* Mbstring PHP Extension
+* OpenSSL PHP Extension
+* PDO PHP Extension
+* Tokenizer PHP Extension
+* XML PHP Extension
+* SQL
+* Apache/Nginx
+
+### Run Following Commmands & Add Configurations:
+
+#### 1. Clone project:
+`git clone https://github.com/sahilofficial671/url-shortener.git`
+
+#### 2. Create database schema:
+**Fresh:** `php artisan migrate:fresh`\
+**With Sample Data** `php artisan migrate:fresh --seed`
+
+#### 3. Add APP_URL in `.env`:
+`APP_URL=http://www.website.com`
+> Important: without `'/'` in end
+
+## Run Project :rocket:
+`php artisan serve`
 
 ## Further tasks to be done :memo:
 - View [todo.md](https://github.com/sahilofficial671/url-shortener/blob/main/todo.md)
