@@ -2,17 +2,17 @@
 
 namespace App\Traits;
 
-trait HasUrl{
-
+trait HasUrl
+{
     /**
      *  Return Full URL.
      *  @return string
      */
     public function getFullUrl()
     {
-        $url  = sprintf('%s://%s%s', $this->protocol, $this->domain, $this->path);
+        $url = sprintf('%s://%s%s', $this->protocol, $this->domain, $this->path);
 
-        if($this->hasQuery()){
+        if ($this->hasQuery()) {
             $url = $url.'?'.$this->query;
         }
 
@@ -29,8 +29,8 @@ trait HasUrl{
     }
 
     /**
-     *  If user can use the url
-     *  @return boolean
+     *  If user can use the url.
+     *  @return bool
      */
     public function isHitAllowed()
     {
@@ -39,7 +39,7 @@ trait HasUrl{
 
     /**
      *  Checks if query string.
-     *  @return boolean
+     *  @return bool
      */
     public function hasQuery()
     {
