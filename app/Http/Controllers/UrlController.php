@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Models\Url;
 use App\Models\Analytic;
+use App\Models\Url;
+use Illuminate\Http\Request;
 use Log;
 
 class UrlController extends Controller
 {
     /**
-     *  This will validate and submit new url for aliasing
+     *  This will validate and submit new url for aliasing.
      *
      *  @param Request $request
      *  @param mixed
@@ -33,7 +33,7 @@ class UrlController extends Controller
             'hits'       => 0,
             'alias'      => $this->generateAlias(),
             'created_by' => Auth::id(),
-            'status'     => true
+            'status'     => true,
         ]);
 
         return back()->with([
@@ -44,18 +44,19 @@ class UrlController extends Controller
     }
 
     /**
-     *  This will fetch and redirect as per given aliased url
+     *  This will fetch and redirect as per given aliased url.
      *
      *  @param  Request $request
      *  @param  string  $alias
      *  @return \Symfony\Component\HttpKernel\Exception\HttpException|\Illuminate\Http\RedirectResponse
      */
-    public function get(Request $request, String $alias)
+    public function get(Request $request, string $alias)
     {
         $url = URL::where('alias', $alias)->firstOrFail();
 
-        if($url->isHitAllowed()){
+        if ($url->isHitAllowed()) {
             $url->increment('hits');
+
             return $url->redirectToFullUrl();
         }
 
@@ -70,7 +71,7 @@ class UrlController extends Controller
     {
         $alias = substr(md5(time()), 0, 6);
 
-        if(Url::byAlias($alias)->get()->isNotEmpty()){
+        if (Url::byAlias($alias)->get()->isNotEmpty()) {
             $this->generateAlias();
         }
 
