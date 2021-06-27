@@ -1,5 +1,6 @@
 # URL Shortener
 ![https://github.com/sahilofficial671/url-shortener/actions?query=workflow%3ABuild"](https://github.com/sahilofficial671/url-shortener/actions/workflows/build.yml/badge.svg)
+[![StyleCI](https://github.styleci.io/repos/367384057/shield?branch=main)](https://github.styleci.io/repos/367384057?branch=main)
 
 ## Introduction
 URL Shortener System comes with:
