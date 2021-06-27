@@ -2,12 +2,11 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Builder;
-
 use App\Models\User;
 use App\Traits\HasUrl;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Url extends Model
 {
@@ -27,23 +26,23 @@ class Url extends Model
         'hits',
         'alias',
         'created_by',
-        'status'
+        'status',
     ];
 
     /**
-     *  This will validate and submit new url for aliasing
+     *  This will validate and submit new url for aliasing.
      *
      *  @param \Illuminate\Database\Eloquent\Builder    $builder
      *  @param  string                                  $alias
      *  @return \Illuminate\Database\Eloquent\Builder
      */
-    public function scopeByAlias(Builder $builder, String $alias)
+    public function scopeByAlias(Builder $builder, string $alias)
     {
         return  $builder->where('alias', $alias);
     }
 
     /**
-     * Get the user that owns the Url
+     * Get the user that owns the Url.
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */

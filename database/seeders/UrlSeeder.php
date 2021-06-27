@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Seeder;
 use App\Models\Url;
+use Illuminate\Database\Seeder;
+
 class UrlSeeder extends Seeder
 {
     /**
@@ -22,7 +23,7 @@ class UrlSeeder extends Seeder
             'hits' => 0,
             'alias' => 'helloworld',
             'created_by' => 1,
-            'status' => true
+            'status' => true,
         ]);
 
         Url::create([
@@ -34,9 +35,8 @@ class UrlSeeder extends Seeder
             'hits' => 0,
             'alias' => 'india',
             'created_by' => 1,
-            'status' => true
+            'status' => true,
         ]);
-
 
         Url::create([
             'protocol' => 'https',
@@ -47,7 +47,7 @@ class UrlSeeder extends Seeder
             'hits' => 0,
             'alias' => 'goo234',
             'created_by' => 1,
-            'status' => true
+            'status' => true,
         ]);
     }
 }

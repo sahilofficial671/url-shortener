@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
-     *  This will return index view
+     *  This will return index view.
      *  @param Request $request
      *  @return \Illuminate\Contracts\View\View
      */
